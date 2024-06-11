@@ -8,7 +8,7 @@
   <meta name="description" content="Vision-Language Feedback">
   <meta name="keywords" content="multimodal chatbot">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MMEvalPro</title>
+  <title>UltraEdit</title>
 
   <style type="text/css">
     svg:not(:root).svg-inline--fa {
@@ -707,7 +707,7 @@
             </span> -->
             </h1>
             <h3 class="title is-3 publication-title">
-              Calibrating Multimodal Benchmarks Towards Trustworthy and Efficient Evaluation</h3>
+              UltraEdit: Instruction-based Fine-Grained Image Editing at Scale</h3>
             <div class="is-size-5">
               <span class="author-block">
                 <a href="https://scholar.google.com.hk/citations?user=skIXywUAAAAJ" style="color:#94070A;font-weight:normal;">Haozhe Zhao<sup>*</sup></a>,
@@ -905,6 +905,25 @@
                 <img id="teaser" width="100%" src="./ultraEditi_files/figs/example_big.png">
               </div>
             </centering>
+
+            <br><br>
+
+            <p>
+              The construction of UltraEdit: <br>
+              <b style="color: #92b5ec;">(Upper)</b>
+              We use LLM with in-context examples to produce editing instructions and target captions given the collected image captions.<br>
+              <b style="color: #ecea92;">(Middle)</b>
+              For free-form editing, we use the collected images as anchors, and invoke regular diffusion followed by prompt-to-prompt (P2P) control to produce source and target images.<br>
+              <b style="color: #ec92bd;">(Bottom)</b>
+              For region-based editing, we first produce an editing region based on the instruction, then invoke a modified inpainting diffusion pipeline to produce the images.
+          </p>
+            <centering>
+              <div style="text-align: center;">
+                <img id="teaser" width="80%" src="./ultraEditi_files/figs/pipeline.png">
+              </div>
+            </centering>
+            <br><br>
+
             <p>
               Comparison of different image editing datasets. Both EditBench and MagicBrush are manually annotated but are limited in size. 
           
@@ -916,24 +935,6 @@
                 <img id="teaser" width="100%" src="./ultraEditi_files/figs/dataset_compare.png">
               </div>
             </centering>
-            
-            <br><br>
-
-            <p>
-              The construction of UltraEdit. <br>
-              <b style="color: #92b5ec;">(Upper)</b><br>
-              We use LLM with in-context examples to produce editing instructions and target captions given the collected image captions.<br>
-              <b style="color: #ecea92;">(Middle)</b><br>
-              For free-form editing, we use the collected images as anchors, and invoke regular diffusion followed by prompt-to-prompt (P2P)~\cite{Hertz2022Prompt2prompt} control to produce source and target images.<br>
-              <b style="color: #ec92bd;">(Bottom)</b><br>
-              For region-based editing, we first produce an editing region based on the instruction, then invoke a modified inpainting diffusion pipeline to produce the images.
-          </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="80%" src="./ultraEditi_files/figs/pipeline.png">
-              </div>
-            </centering>
-
             
           </div>
         </div>
