@@ -588,6 +588,59 @@
     #gradio pre {
       background-color: transparent;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+  }
+
+  thead {
+      background-color: #f3f3f3;
+  }
+
+  th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+  }
+
+  th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+  }
+
+  tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+  }
+
+  tbody tr:hover {
+      background-color: #f1f1f1;
+  }
+
+  .textbox {
+      text-align: center;
+      font-size: larger;
+      font-weight: bold;
+  }
+
+  .container img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .svelte-1viwdyg {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+  
+  .svelte-1viwdyg iframe {
+      display: none;
+  }
   </style>
   <script type="module" crossorigin="" src="./ultraEditi_files/index-9405f928.js"></script>
   <link rel="stylesheet" href="./ultraEditi_files/index-8f5e8d2d.css">
@@ -719,13 +772,13 @@
                 <a href="https://chenllliang.github.io/about/" style="color:#94070A;font-weight:normal;">Liang Chen</a>,
               </span>
               <span class="author-block">
-                <a style="color:#94070A;font-weight:normal;">Shuzheng Si</a>,
+                <a href="https://scholar.google.com.hk/citations?user=zO2XyZUAAAAJ&hl" style="color:#94070A;font-weight:normal;">Shuzheng Si</a>,
               </span> 
               <span class="author-block">
-                <a style="color:#94070A;font-weight:normal;">Rujie Wu</a>,
+                <a href="https://joyjayng.github.io/" style="color:#94070A;font-weight:normal;">Rujie Wu</a>,
               </span> 
               <span class="author-block">
-                <a style="color:#94070A;font-weight:normal;">Kaikai An</a>,
+                <a href="https://scholar.google.com/citations?user=6TrBRiEAAAAJ" style="color:#94070A;font-weight:normal;">Kaikai An</a>,
               </span> 
               <span class="author-block">
                 <a style="color:#1d05a6;font-weight:normal;">Peiyu Yu</a>,
@@ -775,15 +828,16 @@
                     <span>arXiv</span>
                   </a>
                 </span> -->
-                <!-- <span class="link-block">
-                  <a href="https://github.com/" target="_blank"
+
+                <span class="link-block">
+                  <a href="https://github.com/HaozheZhao/UltraEdit" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                     <span>Code</span>
                   </a>
-                </span> -->
+                </span>
                 <span class="link-block">
                   <a href="https://huggingface.co/datasets/BleachNick/UltraEdit" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -794,7 +848,7 @@
                         <path fill="currentColor"
                           d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z">
                         </path>
-                      </svg><!-- <i class="fas fa-database"></i> Font Awesome fontawesome.com -->
+                      </svg>
                     </span>
                     <span>Dataset</span>
                   </a>
@@ -832,9 +886,19 @@
                     <span>Dataset(Region_Based_100k)</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/jeasinema/UltraEdit-SD3" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+                
 
-                <!-- <span class="link-block">
-                  <a href="https://huggingface.co/MMInstruction/Qwen-VL-ArXivCap" target="_blank"
+                <span class="link-block">
+                  <a href="https://huggingface.co/BleachNick/SD3_UltraEdit_w_mask" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <svg class="svg-inline--fa fa-share-square fa-w-18" aria-hidden="true" focusable="false"
@@ -845,9 +909,9 @@
                         </path>
                       </svg>
                     </span>
-                    <span>Model(ArXivCap)</span>
+                    <span>Model</span>
                   </a>
-                </span> -->
+                </span>
 
 
               </div>
@@ -858,6 +922,12 @@
     </div>
   </section>
 
+
+  <section class="section"  style="background-color:#efeff081">
+    <div class="container is-max-desktop" id="gradio">
+      <gradio-app src="https://huggingface.co/spaces/jeasinema/UltraEdit-SD3"></gradio-app>
+    </div>
+  </section>
 
   <section class="section" style="background-color:#efeff081">
     <div class="container is-max-desktop">
@@ -884,8 +954,6 @@
 
     </div>
   </section>
-
-
 
 
 
@@ -935,7 +1003,7 @@
       </div>
   </section>
 
-  <section class="section">
+  <section class="section" style="background-color:#efeff081">
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3"><img id="painting_icon" width="3%" src=""> Example
@@ -993,11 +1061,10 @@
   
       </section>
 
-<!-- 
-  <section class="section">
+<section class="section" >
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="3%" src=""> Example
+        <h2 class="title is-3"><img id="painting_icon" width="3%" src=""> Evaluation
         </h2>
       </div>
     </div>
@@ -1007,37 +1074,57 @@
         <div class="column is-full-width">
           <div class="content has-text-justified">
             <p>
-              A single-figure caption pair in our ArXivCap dataset. (The figure and caption are from <a
-                href="https://arxiv.org/abs/1908.04642">paper arxiv:1908.04642</a>.)
-
+              We evaluate the performance of canonical diffusion-based editing models trained on our dataset across different instruction-based image editing benchmarks.
             </p>
-            <centering>
+              We trained the same diffusion model using an equal amount of training data from the UltraEdit dataset and evaluated its performance against its counterparts.</p>
+               
+            </p>
+
+            <center>
               <div style="text-align: center;">
-                <img id="teaser" width="40%" src="./ultraEditi_files/figs/single-figure.png">
+                <img id="teaser" width="40%" src="./ultraEditi_files/figs/eval_magicbrush.png" alt="Evaluation Results on MagicBrush Benchmark">
+                <p><strong>Evaluation Results on the MagicBrush Benchmark</strong></p>
               </div>
-            </centering>
+            </center>
+
             <br><br>
 
-            <p>
-              A multiple-figure caption pair in our ArXivCap dataset. (The figure and caption are from <a
-                href="https://arxiv.org/abs/1810.10761">paper arxiv:1810.10761</a>.)
-            </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="40%" src="./ultraEditi_files/figs/multiple-figure.png">
-              </div>
-            </centering>
-            <br><br>
 
+            <h3 class="title is-3"><img id="painting_icon" width="3%" src=""> Qualitative and Human Evaluations
+            </h3>
+            
             <p>
-              A case from ArXivQA. (The figure and caption are from <a href="https://arxiv.org/abs/2011.09217">paper
-                arxiv:2011.09217</a>.)
+              Futhermore, we conduct qualitative and human evaluations to assess the consistency, instruction alignment, and image quality of
+              the edited images generated by our model trained on ULTRAEDIT using the MagicBrush benchmark and Emu Test benchmark.
+              
             </p>
-            <centering>
+            <center>
               <div style="text-align: center;">
-                <img id="teaser" width="40%" src="./ultraEditi_files/figs/arxivqa_case.png">
+                <img id="teaser" width="40%" src="./ultraEditi_files/figs/qual_eval_mag_single.png" alt="Qualitative EValuation of Single-turn Setting">
+                <p><strong>Qualitative EValuation of Single-turn Setting</strong></p>
               </div>
-            </centering>
+            </center>
+            <center>
+              <div style="text-align: center;">
+                <img id="teaser" width="40%" src="./ultraEditi_files/figs/qual_eval_mag.png" alt="Qualitative EValuation of Multi-turn Setting">
+                <p><strong>Qualitative EValuation of Multi-turn Setting</strong></p>
+              </div>
+            </center>
+
+            <center>
+              <div style="text-align: center;">
+                <img id="teaser" width="40%" src="./ultraEditi_files/figs/emu_all_sample.pdf" alt="Qualitative Evaluation on Emu Test Set">
+                <p><strong>Qualitative Evaluation on Emu Test Set</strong></p>
+              </div>
+            </center>
+
+            <br><br>
+            <center>
+              <div style="text-align: center;">
+                <img id="teaser" width="40%" src="./ultraEditi_files/figs/real_image_anchor.pdf" alt="Evaluation Results on MagicBrush Benchmark">
+                <p><strong>Qualitative evaluation of using real images as anchors during image generation</strong></p>
+              </div>
+            </center>
 
             <br><br>
           </div>
@@ -1046,79 +1133,124 @@
     </div>
   </section>
 
+  
 
   <section class="section">
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="5%" src=""> Evaluation</h2>
+        <h2 class="title is-3"><img id="painting_icon" width="5%" src=""> Editing Examples</h2>
       </div>
     </div>
     <div class="container is-max-desktop">
-
+      <p> The Editing examples generated by <a style="color: blue; text-decoration: none;" href="https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers" target="_blank" rel="noopener noreferrer">Stable Diffusion3</a> trained with <a style="color: blue; text-decoration: none;" href="https://huggingface.co/datasets/BleachNick/UltraEdit_500k">UltraEdit</a> dataset. It supports both free-form (without mask) and region-based (with mask) image editing. You can try this model in the above <a style="color: blue; text-decoration: none;" href="https://huggingface.co/spaces/jeasinema/UltraEdit-SD3">Demo</a>. </p>
       <div class="columns is-centered">
         <div class="column is-full-width">
           <div class="content has-text-justified">
-            <p>
-              Evaluation on MathVista dataset. ArXivCap and ArXivQA together enhance Qwen-VL-Chat's overall performance,
-              surpassing that of the commercial model Bard. The best results are highlighted in <strong>bold</strong>,
-              while the second-best scores are marked with <u>underline</u>.
-            </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="70%" src="./ultraEditi_files/figs/eval_mathvista.jpg">
-              </div>
-
-            </centering>
-            <br><br>
-
-            <p>
-              Evaluation results of single figure captioning. <a style="color: grey;">Grey</a> results are obtained from
-              a 500-sample subset. Despite most LVLMs struggling to produce high-quality captions of scientific figures,
-              training with ArXivCap significantly boosts the performance.
-            </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="40%" src="./ultraEditi_files/figs/eval_caption.jpg">
-              </div>
-            </centering>
-            <br><br>
-
-            <p>
-              Evaluation results of single figure captioning with paper meta information.
-            </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="40%" src="./ultraEditi_files/figs/eval_caption_with_meta.jpg">
-              </div>
-            </centering>
-            <br><br>
-
-            <p>
-              Evaluation results of three newly defined tasks. The best results are highlighted in <strong>bold</strong>.
-            </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="40%" src="./ultraEditi_files/figs/eval_defined_task.jpg">
-              </div>
-            </centering>
-            <br><br>
-
-            <p>
-              Relative accuracy changes brought by the training on different domain ArXivQA samples.
-            </p>
-            <centering>
-              <div style="text-align: center;">
-                <img id="teaser" width="60%" src="./ultraEditi_files/figs/domain_performance.png">
-              </div>
-            </centering>
-            <br><br>
-
+           
+            <table tabindex="0" role="grid" class="svelte-p5q82i">
+              <thead>
+                  <tr class="tr-head svelte-p5q82i">
+                      <th class="svelte-p5q82i">Input Image</th>
+                      <th class="svelte-p5q82i">Edit Instruction</th>
+                      <th class="svelte-p5q82i">Edited Images</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="tr-body svelte-p5q82i">
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/1-merged.png" alt="" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                      <td class="textbox svelte-p5q82i" style="max-width: 35ch;">
+                          <div class="svelte-1viwdyg table" style="position: relative; --local-text-width: 200px; white-space: unset;">
+                              Add a UFO in the sky
+                          </div>
+                      </td>
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/1.webp" alt="Edited Image Placeholder" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                  </tr>
+                  <tr class="tr-body svelte-p5q82i">
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/1-input.png" alt="" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                      <td class="textbox svelte-p5q82i" style="max-width: 35ch;">
+                          <div class="svelte-1viwdyg table" style="position: relative; --local-text-width: 200px; white-space: unset;">
+                              Add a moon in the sky
+                          </div>
+                      </td>
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/2.webp" alt="Edited Image Placeholder" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                  </tr>
+                  <tr class="tr-body svelte-p5q82i">
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/2-merged.png" alt="" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                      <td class="textbox svelte-p5q82i" style="max-width: 35ch;">
+                          <div class="svelte-1viwdyg table" style="position: relative; --local-text-width: 200px; white-space: unset;">
+                              add cherry blossoms
+                          </div>
+                      </td>
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/3.webp" alt="Edited Image Placeholder" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                  </tr>
+                  <tr class="tr-body svelte-p5q82i">
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/3-merged.png" alt="" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                      <td class="textbox svelte-p5q82i" style="max-width: 35ch;">
+                          <div class="svelte-1viwdyg table" style="position: relative; --local-text-width: 200px; white-space: unset;">
+                              Please dress her in a short purple wedding dress adorned with white floral embroidery.
+                          </div>
+                      </td>
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/4.webp" alt="Edited Image Placeholder" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                  </tr>
+                  <tr class="tr-body svelte-p5q82i">
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/4-merged.png" alt="" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                      <td class="textbox svelte-p5q82i" style="max-width: 35ch;">
+                          <div class="svelte-1viwdyg table" style="position: relative; --local-text-width: 200px; white-space: unset;">
+                              give her a chief's headdress.
+                          </div>
+                      </td>
+                      <td class="imageeditor svelte-p5q82i">
+                          <div class="container svelte-jhlhb0 table">
+                              <img src="./ultraEditi_files/figs/5.webp" alt="Edited Image Placeholder" class="svelte-1pijsyv">
+                          </div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </body>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+<!-- 
 
   <section class="section">
 
